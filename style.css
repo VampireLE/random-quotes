@@ -19,11 +19,11 @@ body {
     border-radius: 10px;
   }
   
-  .btn-primary {
+  #generate-btn {
     background-color: #007bff;
   }
   
-  .btn-primary:hover {
+  #generate-btn:hover {
     background-color: #0056b3;
   }
   
@@ -40,6 +40,15 @@ body {
   
   .quote {
     font-size: 1.2em;
+  }
+
+  .quote {
+    font-style: italic;
+  }
+
+  .quote:before,
+  .quote:after {
+    content: '"';
   }
   
   .quote-text {

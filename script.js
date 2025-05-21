@@ -1,17 +1,58 @@
 const quotes = [
-    "The only way to do great work is to love what you do. - Steve Jobs",
-    "Innovation distinguishes between a leader and a follower. - Steve Jobs",
-    "Your time is limited, so don't waste it living someone else's life. - Steve Jobs",
-]
+    {
+        quote: 'The only way to do great work is to love what you do.',
+        author: 'Steve Jobs'
+    },
+    {
+        quote: 'Innovation distinguishes between a leader and a follower.',
+        author: 'Steve Jobs'
+    },
+    {
+        quote: "Your time is limited, so don't waste it living someone else's life.",
+        author: 'Steve Jobs'
+    },
+    {
+        quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        author: 'Winston Churchill'
+    },
+    {
+        quote: "Life is what happens when you're busy making other plans.",
+        author: 'John Lennon'
+    },
+    {
+        quote: "Imagination is more important than knowledge.",
+        author: 'Albert Einstein'
+    },
+    {
+        quote: "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+        author: 'Ralph Waldo Emerson'
+    },
+    {
+        quote: "In the middle of every difficulty lies opportunity.",
+        author: 'Albert Einstein'
+    },
+    {
+        quote: "Whether you think you can or you think you can’t, you’re right.",
+        author: 'Henry Ford'
+    },
+    {
+        quote: "I have not failed. I've just found 10,000 ways that won't work.",
+        author: 'Thomas Edison'
+    }
+];
+
 
 const quoteElement = document.getElementById('quote');
 const generateBtn = document.getElementById('generate-btn');
-
+const quoteAuthorElement = document.getElementById('quote-autor');
 
 function generateRandomQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length); //floor укругляет в меньшую сторону ceil в большую
     const randomQuote = quotes[randomIndex];
-    quoteElement.textContent = randomQuote;
+    const {quote, author: quoteAuthor} = randomQuote
+    console.log(quote) //undefined
+    quoteElement.textContent = quote;
+    quoteAuthorElement.textContent = quoteAuthor;
 }
 
 generateBtn.addEventListener('click', generateRandomQuote)
