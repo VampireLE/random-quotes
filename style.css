@@ -19,12 +19,16 @@ body {
     border-radius: 10px;
   }
   
-  #generate-btn {
+  .btn {
     background-color: #007bff;
   }
   
-  #generate-btn:hover {
+  .btn:hover {
     background-color: #0056b3;
+  }
+
+  #toggle-favorite-btn {
+    display: none;
   }
   
   .btn-danger {
