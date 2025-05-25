@@ -16,7 +16,6 @@ function choseRandomQuote(quotes) {
 }
 
 function handleQuote(quotes, setCurrentQuote) {
-    console.log(quotes)
     const randomQuote = choseRandomQuote(quotes);
     setCurrentQuote(randomQuote)
     displayQuote(randomQuote);
