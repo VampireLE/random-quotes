@@ -3,9 +3,12 @@ import { handleFavorite } from "./favorites.js";
 
 function displayQuote(quote) {
     const quoteElement = document.getElementById('quote');
+    const quoteTextElement = document.getElementById('quote-text');
     const quoteAuthorElement = document.getElementById('quote-autor');
-    const {text, author, isFavorite} = quote;
-    quoteElement.textContent = text;
+    const {id, text, author, isFavorite} = quote;
+    quoteElement.dataset.currentQuoteId = id;
+    
+    quoteTextElement.textContent = text;
     quoteAuthorElement.textContent = author;
     handleFavorite(isFavorite);
 }

@@ -9,12 +9,12 @@ function setCurrentQuote(quote) {
 }
 
 
-const favoriteBtn = document.getElementById('favorite-btn');
+const quoteFavoriteBtn = document.getElementById('quote-favorite-btn');
 const favoriteContainer = document.getElementById('favorites-container');
-hideFavoriteBtn(favoriteBtn);
-favoriteBtn.addEventListener('click', () => toggleFavorite(currentQuote, favoriteBtn, favoriteContainer));
+hideFavoriteBtn();
+quoteFavoriteBtn.addEventListener('click', () => toggleFavorite(currentQuote, quoteFavoriteBtn, favoriteContainer));
 
 const generateBtn = document.getElementById('generate-btn');
 generateBtn.addEventListener('click', () => handleQuote(quotes, setCurrentQuote));
 
-export { favoriteBtn };
+export { quoteFavoriteBtn};
