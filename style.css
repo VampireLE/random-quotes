@@ -73,11 +73,6 @@ body {
   .quote-text {
     font-style: italic;
   }
-
-  .quote-text:before,
-  .quote-text:after {
-    content: '"';
-  }
   
   .quote-text {
     font-style: italic;
