@@ -18,10 +18,16 @@ function choseRandomQuote(quotes) {
     return quotes[randomIndex];
 }
 
-function handleQuote(quotes, setCurrentQuote) {
+
+function findQuoteById(quotes, id) {
+    return quotes.find(quote => quote.id === id)
+}
+
+function handleQuote(quotes, favoritesQuote, setCurrentQuote) {
     const randomQuote = choseRandomQuote(quotes);
+    if (favoritesQuote.find(quote => quote.id === randomQuote.id)) randomQuote.isFavorite = true;
     setCurrentQuote(randomQuote)
     displayQuote(randomQuote);
 }
 
-export { handleQuote};
+export { handleQuote, displayQuote, findQuoteById};
